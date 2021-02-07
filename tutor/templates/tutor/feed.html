@@ -1,0 +1,10 @@
+{% extends 'tutor/base_tutor.html' %}
+
+{% block content %}
+    <h3 style="margin: 10px 0;">Feed</h3>
+    {% for feed in feed_list %}
+        {% if feed.approve %}
+            {% include 'tutor/single_ad.inc.html' %}
+        {% endif %}
+    {% endfor %}
+{% endblock content %}
