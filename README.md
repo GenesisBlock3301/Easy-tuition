@@ -1,5 +1,7 @@
 # Project title: Easy Tuition
 
+# Live Demo
+[Easy Tuition](https://etuition.herokuapp.com/)
 
 
 # Requirements
