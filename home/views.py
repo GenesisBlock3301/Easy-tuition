@@ -16,13 +16,6 @@ def home(request):
 
 
 def login(request):
-    if request.user.is_client and request.user.is_authenticated:
-            return redirect('client-home')
-    if request.user.is_tutor and request.user.is_authenticated:
-            return redirect('tutor-home')
-    if request.user.is_anonymous:
-        return redirect('home-page')
-
     current_tab = request.GET.get('tab', 'client')
     email = request.GET.get('email', '')
     context = {
