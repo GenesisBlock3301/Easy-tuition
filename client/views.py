@@ -17,6 +17,7 @@ from .models import ClientFeedback
 from tutor.models import TutorFeedback
 from TuitionManagement.settings import BASE_DIR
 
+
 @client_required
 def home(request):
     """Show only the ads posted by the client which are not timed out and not already taken"""
@@ -142,7 +143,7 @@ def new(request):
         # except ValueError:
         #     t_timeout = False
 
-        if title and description and subjects and _type and grade and std_genders.get(gender, False) and std_count and\
+        if title and description and subjects and _type and grade and std_genders.get(gender, False) and std_count and \
                 pref_genders.get(pref_gender, False) and _time and days and location and salary and timeout:
             ad = Ad.objects.create(title=title, description=description, subjects=subjects, type=_type, grade=grade,
                                    gender=std_genders.get(gender, False), std_count=int(std_count),
@@ -317,6 +318,7 @@ def settings(request):
 @client_required
 def logout(request):
     logout_user(request)
+    print(">>>>>>>>>>>>>>>>>>>>>>>>>logout>>>>>>>>>>>>>>")
     messages.info(request, 'You\'ve been successfully logged out!')
     return redirect('home-page')
 
@@ -331,10 +333,23 @@ def login(request):
             return redirect('client-home')
         else:
             messages.error(request, 'Client not found, are you a tutor?')
-            return redirect('{}?tab=client&email={}'.format(reverse('login-page'), email))
+            return redirect(f"{reverse('login-page')}?tab=client&email={email}")
     else:
         messages.error(request, 'Invalid email or password! Please enter the right user credentials to login.')
-        return redirect('{}?tab=client&email={}'.format(reverse('login-page'), email))
+        return redirect(f"{reverse('login-page')}?tab=client&email={email}")
+
+
+# Teacher search by student
+def search(request):
+    if request.method == "POST":
+        name = request.POST.get('name', '')
+        print('NNNNNNNNNNNNNNNNNNNNNNNNNNNNNName', name)
+
+        # tutors = User.objects.filter(is_tutor=True, name=name)
+        # return render(request, 'client/TeacherSearchResult.html', {'tutors': tutors})
+
+    tutors = User.objects.filter(is_tutor=True,name__icontains=name)
+    return render(request, 'client/TeacherSearchResult.html', {'tutors': tutors})
 
 
 # Helper functions #
@@ -371,7 +386,7 @@ def get_feed_list(request, ads):
 
 def handle_verification_file(f):
     file_name = f"file_{int(time())}_{f.name}"
-    with open(BASE_DIR+'/media/v_files/{}'.format(file_name), 'wb+') as destination:
+    with open(BASE_DIR + '/media/v_files/{}'.format(file_name), 'wb+') as destination:
         for chunk in f.chunks():
             destination.write(chunk)
     return file_name
@@ -379,7 +394,7 @@ def handle_verification_file(f):
 
 def handle_profile_image(f):
     file_name = 'file_{}_{}'.format(int(time()), f.name)
-    with open(BASE_DIR+'/media/profile_imgs/{}'.format(file_name), 'wb+') as destination:
+    with open(BASE_DIR + '/media/profile_imgs/{}'.format(file_name), 'wb+') as destination:
         for chunk in f.chunks():
             destination.write(chunk)
     return file_name

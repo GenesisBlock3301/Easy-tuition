@@ -14,4 +14,5 @@ urlpatterns = [
     path('running/', views.running, name='client-running'),
     path('history/', views.history, name='client-history'),
     path('settings/', views.settings, name='client-settings'),
+    path('search/', views.search, name='teacher-search'),
 ]

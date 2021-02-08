@@ -19,10 +19,12 @@ class Ad(models.Model):
     client = models.ForeignKey(User, on_delete=models.CASCADE)
     taken = models.BooleanField(default=False, verbose_name='Taken')  # Whether the job is taken
     approve = models.BooleanField(default=False)
-    timeout = models.DateTimeField(null=False, verbose_name='Run This Ad Until')  # The Ad will be available until that time
+    timeout = models.DateTimeField(null=False,
+                                   verbose_name='Run This Ad Until')  # The Ad will be available until that time
 
     def __str__(self):
         return self.title
+
 
 class Question(models.Model):
     ad = models.ForeignKey(Ad, on_delete=models.CASCADE)

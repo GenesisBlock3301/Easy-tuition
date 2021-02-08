@@ -5,10 +5,21 @@ from django.urls import reverse
 
 
 def home(request):
+    try:
+        if request.user.is_client and request.user.is_authenticated:
+            return redirect('client-home')
+        elif request.user.is_tutor and request.user.is_authenticated:
+            return redirect('tutor-home')
+    except:
+        return render(request, 'home/home.html')
     return render(request, 'home/home.html')
 
 
 def login(request):
+    if request.user.is_client and request.user.is_authenticated:
+        return redirect('client-home')
+    if request.user.is_tutor and request.user.is_authenticated:
+        return redirect('tutor-home')
     current_tab = request.GET.get('tab', 'client')
     email = request.GET.get('email', '')
     context = {
@@ -36,7 +47,7 @@ def register(request):
     email = request.POST['email']
     password1 = request.POST['password1']
     password2 = request.POST['password2']
-    password = None
+    # password = None
     print(">>>>>>>>>>>>>>>>>>>>", password1, password2)
     if password1 == password2:
         user = User.objects.filter(email=email)
@@ -75,11 +86,11 @@ def register(request):
                     return redirect('tutor-home')
                 else:
                     messages.error(request, 'Account already exists, try with a different email.')
-                    return redirect('{}#signup_tutor'.format(reverse('home-page')))
+                    return redirect(f"{reverse('home-page')}#signup_tutor")
         else:
             messages.error(request, 'Invalid user type.')
 
         return redirect('home-page')
     else:
-        messages.error(request,"Password not match")
+        messages.error(request, "Password not match")
         return redirect('home-page')

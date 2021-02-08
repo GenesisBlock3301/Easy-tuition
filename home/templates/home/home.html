@@ -63,7 +63,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-10 col-lg-8 mx-auto text-center">
-                <h1 class="text-uppercase">Sign up as a Tutor</h1>
+                <h1 class="text-uppercase" style="color: white">Sign up as a Tutor</h1>
                 <form method="post" action="{% url 'register-action' %}">
                     {% csrf_token %}
                     <input class="form-control" type="hidden" name="user_type" value="tutor">

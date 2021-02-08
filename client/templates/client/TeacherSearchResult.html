@@ -1,0 +1,17 @@
+{% extends 'client/base_client.html' %}
+
+{% block content %}
+    <h1 class="text-center text-info">Search result</h1>
+    <div class="history">
+        {% if tutors %}
+            {% for tutor in tutors %}
+                <div class="history-active" style="margin-bottom: 10px">
+                    <a class="btn btn-light d-block text-left" href="{% url 'tutor-profile' tutor.id %}" role="button"
+                       aria-expanded="false" aria-controls="history_active">
+                        {{ tutor.name }}
+                    </a>
+                </div>
+            {% endfor %}
+        {% endif %}
+    </div>
+{% endblock %}
