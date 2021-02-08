@@ -2,7 +2,7 @@
 
 {% block content %}
     <h1>Post a New Ad</h1>
-    <form method="POST">
+    <form method="POST" action="{% url 'client-new' %}">
       <fieldset class="form-group">
         {% csrf_token %}
         <label for="title" class="sr-only">Ad title</label>

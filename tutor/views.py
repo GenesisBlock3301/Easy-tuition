@@ -352,7 +352,7 @@ def is_profile_incomplete(request):
 
 def handle_profile_image(f):
     file_name = f"file_{int(time())}_{f.name}"
-    with open(BASE_DIR+f'/media/profile_imgs/{file_name}', 'wb+') as destination:
+    with open(BASE_DIR+f"/media/profile_imgs/{file_name}", 'wb+') as destination:
         for chunk in f.chunks():
             destination.write(chunk)
     return file_name
