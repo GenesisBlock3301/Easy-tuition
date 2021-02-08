@@ -343,7 +343,7 @@ def login(request):
 def search(request):
     if request.method == "POST":
         name = request.POST.get('name', '')
-        print('NNNNNNNNNNNNNNNNNNNNNNNNNNNNNName', name)
+        # print('NNNNNNNNNNNNNNNNNNNNNNNNNNNNNName', name)
 
         # tutors = User.objects.filter(is_tutor=True, name=name)
         # return render(request, 'client/TeacherSearchResult.html', {'tutors': tutors})

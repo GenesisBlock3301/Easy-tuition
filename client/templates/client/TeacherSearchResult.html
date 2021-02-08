@@ -6,7 +6,7 @@
         {% if tutors %}
             {% for tutor in tutors %}
                 <div class="history-active" style="margin-bottom: 10px">
-                    <a class="btn btn-light d-block text-left" href="{% url 'tutor-profile' tutor.id %}" role="button"
+                    <a class="btn btn-light d-block text-left" href="{% url 'client-profile' tutor.id %}" role="button"
                        aria-expanded="false" aria-controls="history_active">
                         {{ tutor.name }}
                     </a>
