@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="38939805-5b20-4328-814a-226185663189" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/TuitionManagement/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/TuitionManagement/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/static/css/grayscale.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/home/static/css/grayscale.min.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -12,19 +13,24 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/home/static/css/grayscale.min.css">
-          <provider selected="true" editor-type-id="text-editor" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-143">
+              <caret line="222" column="32" lean-forward="true" selection-start-line="222" selection-start-column="32" selection-end-line="222" selection-end-column="32" />
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/home/templates/home/home.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="149" column="40" lean-forward="true" selection-start-line="149" selection-start-column="40" selection-end-line="149" selection-end-column="40" />
+            <state relative-caret-position="17">
+              <caret line="91" column="45" lean-forward="true" selection-start-line="91" selection-start-column="45" selection-end-line="91" selection-end-column="45" />
               <folding>
                 <element signature="n#style#0;n#a#0;n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#h1#0;n#div#0;n#div#0;n#div#0;n#section#3;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -60,7 +66,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/home/static/css/grayscale.css">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="129">
@@ -94,7 +100,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/TuitionManagement/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-42">
+            <state relative-caret-position="252">
               <caret line="24" column="12" selection-start-line="24" selection-start-column="12" selection-end-line="24" selection-end-column="12" />
             </state>
           </provider>
@@ -152,10 +158,10 @@
         <option value="$PROJECT_DIR$/client/templates/client/feedback.html" />
         <option value="$PROJECT_DIR$/tutor/templates/tutor/feedback.inc.html" />
         <option value="$PROJECT_DIR$/tutor/templates/tutor/feedback.html" />
-        <option value="$PROJECT_DIR$/home/templates/home/home.html" />
-        <option value="$PROJECT_DIR$/home/static/css/grayscale.min.css" />
         <option value="$PROJECT_DIR$/home/templates/home/login.html" />
+        <option value="$PROJECT_DIR$/home/templates/home/home.html" />
         <option value="$PROJECT_DIR$/TuitionManagement/settings.py" />
+        <option value="$PROJECT_DIR$/home/static/css/grayscale.min.css" />
       </list>
     </option>
   </component>
@@ -332,12 +338,12 @@
       <workItem from="1612932391412" duration="85000" />
       <workItem from="1612937706609" duration="231000" />
       <workItem from="1613021805352" duration="5359000" />
-      <workItem from="1613048589599" duration="10978000" />
+      <workItem from="1613048589599" duration="11235000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25072000" />
+    <option name="totallyTimeSpent" value="25329000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -683,9 +689,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/home/static/css/grayscale.min.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/home/templates/home/login.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="578">
@@ -710,28 +713,36 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/home/static/css/grayscale.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="129">
+          <caret line="212" column="1" selection-start-line="212" selection-start-column="1" selection-end-line="212" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/TuitionManagement/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-42">
+        <state relative-caret-position="252">
           <caret line="24" column="12" selection-start-line="24" selection-start-column="12" selection-end-line="24" selection-end-column="12" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/home/templates/home/home.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="149" column="40" lean-forward="true" selection-start-line="149" selection-start-column="40" selection-end-line="149" selection-end-column="40" />
+        <state relative-caret-position="17">
+          <caret line="91" column="45" lean-forward="true" selection-start-line="91" selection-start-column="45" selection-end-line="91" selection-end-column="45" />
           <folding>
             <element signature="n#style#0;n#a#0;n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h1#0;n#div#0;n#div#0;n#div#0;n#section#3;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/home/static/css/grayscale.css">
+    <entry file="file://$PROJECT_DIR$/home/static/css/grayscale.min.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="129">
-          <caret line="212" column="1" selection-start-line="212" selection-start-column="1" selection-end-line="212" selection-end-column="1" />
+        <state relative-caret-position="-143">
+          <caret line="222" column="32" lean-forward="true" selection-start-line="222" selection-start-column="32" selection-end-line="222" selection-end-column="32" />
         </state>
       </provider>
     </entry>
