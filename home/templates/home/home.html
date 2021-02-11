@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
           rel="stylesheet">
 
-    <title>Easy Tution</title>
+    <title>Easy Tuition</title>
 
     <link href="{% static 'css/grayscale.min.css' %}" rel="stylesheet">
 </head>
@@ -31,14 +31,17 @@
                     <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#faq-form">FAQ</a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link btn-info" style="border-radius: 0;color: gold;" href="{% url 'login-page' %}">Login</a>
                 </li>
             </ul>
         </div>
     </div>
 </nav>
-
-<header class="masthead" style="background: url('../../static/img/bg-signup-1.jpg')">
+{#style="background: url('../../static/img/bg-signup-1.jpg')"#}
+<header class="masthead">
     {% if messages %}
         {% for message in messages %}
             {% if message.tags == 'error' %}
@@ -59,7 +62,9 @@
         </div>
     </div>
 </header>
-<section id="signup_tutor" class="signup-section" style="background: url('../../static/img/bg-masthead-1.jpg')">
+<section id="signup_tutor" class="signup-section"
+        {#         background: url('../../static/img/bg-masthead-1.jpg');#}
+         style="background-color: rgba(0,0,0, 60);">
     <div class="container">
         <div class="row">
             <div class="col-md-10 col-lg-8 mx-auto text-center">
@@ -83,7 +88,7 @@
 </section>
 
 <!-- Signup Section -->
-<section id="signup_client" class="signup-section" style="background: url('../../static/img/bg-signup-1.jpg')">
+<section id="signup_client" class="signup-section">
     <div class="container">
         <div class="row">
             <div class="col-md-10 col-lg-8 mx-auto text-center">
@@ -105,7 +110,7 @@
     </div>
 </section>
 
-<section id="contact" class="contact-section bg-black">
+<section id="contact" class="contact-section bg-black" style="padding-bottom: 30px">
     <div class="container">
         <div class="row">
             <div class="col-md-4 mb-3 mb-md-0">
@@ -123,7 +128,7 @@
                         <h4 class="text-uppercase m-0" style="font-weight: 600">Email</h4>
                         <hr class="my-4">
                         <div class="small text-black-50">
-                            <a href="#" >easytution@gmail.com</a>
+                            <a href="#">easytution@gmail.com</a>
                         </div>
                     </div>
                 </div>
@@ -133,9 +138,54 @@
                     <div class="card-body text-center">
                         <h4 class="text-uppercase m-0" style="font-weight: 600">Phone</h4>
                         <hr class="my-4">
-                        <div class="small text-black-50"><a href="tel:+8801123456789" style="font-weight: 600">+880 175 8809212</a></div>
+                        <div class="small text-black-50"><a href="tel:+8801123456789" style="font-weight: 600">+880 175
+                            8809212</a></div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </div>
+</section>
+{#<div class="signup-section">#}
+{#FAQ section#}
+{#    <div class="container" id="faq-form" style="margin-top: 10px">#}
+{#        <h1 class="text-center" style="color: white">Send message us</h1>#}
+{#        <form style="color: white" action="/#fag-form">#}
+{#             <div class="mb-3">#}
+{#                <label for="name" class="form-label">Full Name</label>#}
+{#                <input type="text" name="name" class="form-control" id="email" aria-describedby="emailHelp">#}
+{#            </div>#}
+{#            <div class="mb-3">#}
+{#                <label for="email" class="form-label">Email</label>#}
+{#                <input type="email" name="email" class="form-control" id="email" aria-describedby="emailHelp">#}
+{#            </div>#}
+{#            <div class="mb-3">#}
+{#                <label for="text" class="form-label">Subject</label>#}
+{#                <input type="text" name="subject" class="form-control" id="email" aria-describedby="emailHelp">#}
+{#            </div>#}
+{#            <div class="mb-3">#}
+{#                <label for="text" class="form-label">Detail</label>#}
+{#                <textarea id="w3review" name="detail" style="width: 100%"  rows="4" cols="50"></textarea>#}
+{#            </div>#}
+{#            <button class="btn btn-secondary float-right" type="submit">Send Message <i#}
+{#                            class="fa fa-arrow-circle-right"></i></button>#}
+{#        </form>#}
+{#    </div>#}
+{#</div>#}
+<section  id="faq-form" class="signup-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-10 col-lg-8 mx-auto text-center">
+                <h1 class="text-center" style="color: white">Send message us</h1>
+                <form method="post" action="/#fag-form">
+                    {% csrf_token %}
+                    <input class="form-control" type="text" name="name" placeholder="Enter Your Name"/>
+                    <input class="form-control" type="email" name="email" placeholder="Enter Your Email"/>
+                    <input class="form-control" type="text" name="subject" placeholder="Subject"/>
+                    <textarea id="w3review" name="message" placeholder="Message"  style="width: 100%;padding-left: 4%" rows="4" cols="50"></textarea>#}
+                    <button class="btn btn-secondary float-right" type="submit">Send Message <i
+                            class="fa fa-arrow-circle-right"></i></button>
+                </form>
             </div>
         </div>
     </div>

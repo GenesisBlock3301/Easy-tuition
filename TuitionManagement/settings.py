@@ -22,7 +22,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '-bqlu##ejfz$jc%ppl2(ndogkgeulpfn7c_4pi86k%_)r@nef&'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = [".etuition.herokuapp.com", '127.0.0.1']
 
@@ -102,6 +102,17 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
+
+#################
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_USE_TLS = True
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'genesisblock1033@gmail.com'
+EMAIL_HOST_PASSWORD = '7208393Na?'
+
+################
 
 # Internationalization
 # https://docs.djangoproject.com/en/2.2/topics/i18n/

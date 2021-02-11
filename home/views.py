@@ -2,17 +2,34 @@ from django.shortcuts import render, redirect
 from django.contrib import messages
 from users.models import User
 from django.urls import reverse
+from django.views import View
+from django.core.mail import send_mail
+from TuitionManagement.settings import EMAIL_HOST_USER
 
 
-def home(request):
-    try:
-        if request.user.is_client and request.user.is_authenticated:
-            return redirect('client-home')
-        elif request.user.is_tutor and request.user.is_authenticated:
-            return redirect('tutor-home')
-    except:
+class Home(View):
+    def get(self, request):
+        try:
+            if request.user.is_client and request.user.is_authenticated:
+                return redirect('client-home')
+            elif request.user.is_tutor and request.user.is_authenticated:
+                return redirect('tutor-home')
+        except:
+            return render(request, 'home/home.html')
         return render(request, 'home/home.html')
-    return render(request, 'home/home.html')
+
+    def post(self, request):
+        name = request.POST.get('name', '')
+        email = request.POST.get('email', '')
+        subject = request.POST.get('subject','')
+        message = request.POST.get('message','')
+        container = name+"\n"+email+"\n"+subject+"\n"+message
+        print(container)
+        # print('>>>>>>>>>>>>>>>>',name,">>>>>>>>>>>>",message,'>>>>>>>>>>>',email)
+        send_mail(subject=subject, message=container, from_email=email, recipient_list=[EMAIL_HOST_USER],
+                  fail_silently=False)
+
+        return redirect('home-page')
 
 
 def login(request):
