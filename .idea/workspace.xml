@@ -2,31 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="38939805-5b20-4328-814a-226185663189" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TuitionManagement/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/TuitionManagement/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/templates/client/base_client.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/templates/client/base_client.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/templates/client/feed.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/templates/client/feed.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/templates/client/feedback.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/templates/client/feedback.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/templates/client/history.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/templates/client/history.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/templates/client/new_ad.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/templates/client/new_ad.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/templates/client/running.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/templates/client/running.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/templates/client/settings.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/templates/client/settings.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/templates/client/single_ad.inc.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/templates/client/single_ad.inc.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/templates/client/view_ad.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/templates/client/view_ad.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/templates/home/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/home/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/templates/home/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/home/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/templates/home/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/home/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutor/templates/tutor/apply.html" beforeDir="false" afterPath="$PROJECT_DIR$/tutor/templates/tutor/apply.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutor/templates/tutor/base_tutor.html" beforeDir="false" afterPath="$PROJECT_DIR$/tutor/templates/tutor/base_tutor.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutor/templates/tutor/edit_profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/tutor/templates/tutor/edit_profile.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutor/templates/tutor/feed.html" beforeDir="false" afterPath="$PROJECT_DIR$/tutor/templates/tutor/feed.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutor/templates/tutor/feedback.html" beforeDir="false" afterPath="$PROJECT_DIR$/tutor/templates/tutor/feedback.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutor/templates/tutor/feedback.inc.html" beforeDir="false" afterPath="$PROJECT_DIR$/tutor/templates/tutor/feedback.inc.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutor/templates/tutor/history.html" beforeDir="false" afterPath="$PROJECT_DIR$/tutor/templates/tutor/history.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutor/templates/tutor/settings.html" beforeDir="false" afterPath="$PROJECT_DIR$/tutor/templates/tutor/settings.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutor/templates/tutor/single_ad.inc.html" beforeDir="false" afterPath="$PROJECT_DIR$/tutor/templates/tutor/single_ad.inc.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutor/templates/tutor/tutor_profile.inc.html" beforeDir="false" afterPath="$PROJECT_DIR$/tutor/templates/tutor/tutor_profile.inc.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -76,7 +52,7 @@
         <entry file="file://$PROJECT_DIR$/TuitionManagement/settings.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="264">
-              <caret line="24" column="13" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
+              <caret line="24" column="12" selection-start-line="24" selection-start-column="12" selection-end-line="24" selection-end-column="12" />
             </state>
           </provider>
         </entry>
@@ -364,12 +340,12 @@
       <workItem from="1612932391412" duration="85000" />
       <workItem from="1612937706609" duration="231000" />
       <workItem from="1613021805352" duration="5359000" />
-      <workItem from="1613048589599" duration="9733000" />
+      <workItem from="1613048589599" duration="10053000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23827000" />
+    <option name="totallyTimeSpent" value="24147000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -777,7 +753,7 @@
     <entry file="file://$PROJECT_DIR$/TuitionManagement/settings.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="264">
-          <caret line="24" column="13" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
+          <caret line="24" column="12" selection-start-line="24" selection-start-column="12" selection-end-line="24" selection-end-column="12" />
         </state>
       </provider>
     </entry>
