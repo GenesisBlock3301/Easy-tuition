@@ -7,7 +7,7 @@
         border: none;
     }
     </style>
-    <div class="modal fade" id="education_modal" tabindex="-1" role="dialog" aria-labelledby="education_modal_label" aria-hidden="true">
+    <div  class="modal fade" id="education_modal" tabindex="-1" role="dialog" aria-labelledby="education_modal_label" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
           <div class="modal-header">
@@ -44,8 +44,8 @@
         </div>
       </div>
     </div>
-    <div class="settings" style="margin: 10px 0;">
-      <h3>Edit Profile</h3>
+    <div class="settings" style="margin: 10px 0;color: white">
+      <h3 class="text-center" style="color: white;text-shadow: 2px 2px #FF0000;">Edit Profile</h3>
       <form method="post" enctype="multipart/form-data">
         {% csrf_token %}
         <fieldset class="form-group">
@@ -93,8 +93,8 @@
               <input type="hidden" name="edu_ty_{{ forloop.counter0 }}" value="{{ edu.to_year|date:"Y-m-d" }}">
               <input type="hidden" name="edu_res_{{ forloop.counter0 }}" value="{{ edu.result }}">
               <h5 class="card-text">{{ edu.institute }}</h5>
-              <h6 class="card-text small text-muted">{{ edu.degree }}, {{ edu.department }}</h6>
-              <h6 class="card-text small text-muted">{{ edu.from_year|date:"Y" }} - {{ edu.to_year|date:"Y" }}, {{ edu.result }}</h6>
+              <h6 style="color: white" class="card-text small ">{{ edu.degree }}, {{ edu.department }}</h6>
+              <h6 style="color: white" class="card-text small ">{{ edu.from_year|date:"Y" }} - {{ edu.to_year|date:"Y" }}, {{ edu.result }}</h6>
             </div>
           {% endfor %}
         </fieldset>

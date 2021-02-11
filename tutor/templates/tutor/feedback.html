@@ -10,7 +10,7 @@
     <div class="view-ad">
       {% include 'tutor/single_ad.inc.html' %}
     </div>
-    <form method="post">
+    <form style="color:white;" method="post">
       {% csrf_token %}
       <label for="rating">Rating</label>
       <select class="form-control" name="rating" id="rating" required>

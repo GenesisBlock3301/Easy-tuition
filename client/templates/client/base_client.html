@@ -13,7 +13,7 @@
     <title>Tuition Management System</title>
     <link href="{% static 'css/grayscale.min.css' %}" rel="stylesheet">
 </head>
-<body style="background-color: cornsilk;">
+<body style="background-color: #0c5460;">
 <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark" style="margin-bottom: 10px">
     <div class="container">
         <a class="navbar-brand js-scroll-trigger" href="{% url 'client-home' %}">Easy Tution</a>
@@ -59,7 +59,7 @@
                 <div class="position-fixed"> <!-- fix for xs devices -->
                     <ul class="nav flex-column">
                         <li class="nav-item">
-                            <a class="nav-link {{ client_home }}" href="{% url 'client-home' %}">
+                            <a style="color: white" class="nav-link {{ client_home }}" href="{% url 'client-home' %}">
                                 <i class="fa fa-home"></i>
                                 Home
                                 {% if client_home %}
@@ -68,7 +68,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link {{ client_running }}" href="{% url 'client-running' %}">
+                            <a class="nav-link {{ client_running }}" style="color: white"  href="{% url 'client-running' %}">
                                 <i class="far fa-hourglass"></i>
                                 Running
                                 {% if client_running %}
@@ -77,7 +77,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link {{ client_history }}" href="{% url 'client-history' %}">
+                            <a style="color: white"  class="nav-link {{ client_history }}" href="{% url 'client-history' %}">
                                 <i class="fa fa-history"></i>
                                 History
                                 {% if client_history %}
@@ -86,7 +86,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link {{ client_settings }}" href="{% url 'client-settings' %}">
+                            <a style="color: white"  class="nav-link {{ client_settings }}" href="{% url 'client-settings' %}">
                                 <i class="fa fa-cog"></i>
                                 Settings
                                 {% if client_settings %}

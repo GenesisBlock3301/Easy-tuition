@@ -1,6 +1,6 @@
 <p class="card-text small">
-  <span class="text-muted">{{ whos_feedback }} Feedback:</span><br>
-  {# Print filled stars #}
+  <span  style="color: white">{{ whos_feedback }} Feedback:</span><br>
+  {# print filled stars #}
   {% with ''|center:feedback.rating as range %}
   {% for _ in range %}
     <i class="fas fa-star"></i>
@@ -15,5 +15,5 @@
   {% endfor %}
   {% endwith %}
   {% endwith %}
-  {{ feedback.rating }} star<br>
-  {{ feedback.feedback }}</p>
+  {{ feedback.rating }} star<br></p>
+  <p style="color: white">{{ feedback.feedback }}</p>

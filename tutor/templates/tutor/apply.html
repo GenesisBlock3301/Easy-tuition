@@ -7,16 +7,17 @@
         margin-bottom: 10px;
     }
     </style>
-    <div class="apply-form">
+    <h5 class="text-center" style="text-shadow: 2px 2px #FF0000;color: white;padding-top: 30px"> APPLY</h5>
+    <div class="apply-form" style="padding-top: 30px">
       {% include 'tutor/single_ad.inc.html' %}
     {% if feed.already_applied %}
-      <h5 class="font-weight-bold">Proposal</h5>
-      <p>{{ feed.proposal }}</p>
+      <h5 class="font-weight-bold" style="color: white">Proposal</h5>
+      <p style="color: white">{{ feed.proposal }}</p>
       {% if feed.answers.count %}
-        <h5 class="font-weight-bold">Questions asked by the client:</h5>
+        <h5 class="font-weight-bold" style="color: white">Questions asked by the client:</h5>
         <ol>
         {% for val in feed.answers.all %}
-          <li><span class="font-weight-bold">{{ val.question }}</span><br>{{ val.answer }}</li>
+          <li style="color: white"><span class="font-weight-bold">{{ val.question }}</span><br>{{ val.answer }}</li>
         {% endfor %}
         </ol>
       {% endif %} {# end qa #}
@@ -25,7 +26,7 @@
         {% csrf_token %}
         <textarea class="form-control" name="proposal" placeholder="Write a proposal (optional)"></textarea>
         {% if feed.questions.count %}
-          <p>Questions asked by the client:</p>
+          <p style="color: white">Questions asked by the client:</p>
           {% for val in feed.questions.all %}
             <textarea class="form-control" name="q_{{ val.pk }}" placeholder="{{ val }}" required></textarea>
           {% endfor %}

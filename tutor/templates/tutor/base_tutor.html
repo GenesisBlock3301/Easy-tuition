@@ -15,7 +15,7 @@
 
     <link href="{% static 'css/grayscale.min.css' %}" rel="stylesheet">
 </head>
-<body style="background-color: cornsilk;">
+<body style="background-color: #0c5460;">
 <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark">
     <div class="container">
         <a class="navbar-brand js-scroll-trigger" href="{% url 'tutor-feed' %}">Easy Tuition</a>
@@ -44,7 +44,7 @@
                 <div class="position-fixed"> <!-- fix for xs devices -->
                     <ul class="nav flex-column">
                         <li class="nav-item">
-                            <a class="nav-link {{ tutor_feed }}" href="{% url 'tutor-feed' %}">
+                            <a style="color: white" class="nav-link {{ tutor_feed }}" href="{% url 'tutor-feed' %}">
                                 <i class="fa fa-home"></i>
                                 Feed
                                 {% if tutor_feed %}
@@ -53,7 +53,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link {{ tutor_profile }}" href="{% url 'tutor-profile' user.pk %}">
+                            <a style="color: white" class="nav-link {{ tutor_profile }}" href="{% url 'tutor-profile' user.pk %}">
                                 <i class="fa fa-user"></i>
                                 Profile
                                 {% if tutor_profile %}
@@ -62,7 +62,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link {{ tutor_history }}" href="{% url 'tutor-history' %}">
+                            <a style="color: white" class="nav-link {{ tutor_history }}" href="{% url 'tutor-history' %}">
                                 <i class="fa fa-history"></i>
                                 History
                                 {% if tutor_history %}
@@ -71,7 +71,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link {{ tutor_settings }}" href="{% url 'tutor-settings' %}">
+                            <a style="color: white" class="nav-link {{ tutor_settings }}" href="{% url 'tutor-settings' %}">
                                 <i class="fa fa-cog"></i>
                                 Settings
                                 {% if tutor_settings %}

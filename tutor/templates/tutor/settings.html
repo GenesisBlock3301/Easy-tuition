@@ -2,8 +2,8 @@
 
 {% block content %}
     <div class="settings" style="margin: 10px 0;">
-      <h3>Settings</h3>
-      <form method="post" enctype="multipart/form-data">
+      <h3 style="padding-top: 30px;text-shadow: 2px 2px #FF0000;color: white" class="text-center">Settings</h3>
+      <form style="color: white" method="post" enctype="multipart/form-data">
         {% csrf_token %}
         <fieldset class="form-group">
           <legend>Change Email/Phone</legend>

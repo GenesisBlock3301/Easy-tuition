@@ -2,13 +2,13 @@
 
 {% block content %}
     <div class="history">
-      <h3>History</h3>
+      <h3 class="text-center" style="color: white;text-shadow: 2px 2px #FF0000;padding-top: 30px">History</h3>
       {% if feed_archive|length %}
       {% for feed in feed_archive %}
         {% include 'client/single_ad.inc.html' %}
       {% endfor %}
       {% else %}
-        <p>No history found.</p>
+        <p class="text-center" style="color:white;">No history found.</p>
       {% endif %}
     </div>
 {% endblock %}

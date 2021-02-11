@@ -18,7 +18,7 @@
 <body id="page-top">
 <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
     <div class="container">
-        <a class="navbar-brand js-scroll-trigger" href="#page-top" style="">Easy Tuition</a>
+        <a class="navbar-brand js-scroll-trigger" href="#page-top" style="text-shadow: 2px 2px #FF0000;">Easy Tuition</a>
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
                 data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -34,6 +34,9 @@
                     <a class="nav-link js-scroll-trigger" href="#faq-form">FAQ</a>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#head">Signup</a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link btn-info" style="border-radius: 0;color: gold;" href="{% url 'login-page' %}">Login</a>
                 </li>
             </ul>
@@ -41,7 +44,7 @@
     </div>
 </nav>
 {#style="background: url('../../static/img/bg-signup-1.jpg')"#}
-<header class="masthead">
+<header class="masthead" id="head">
     {% if messages %}
         {% for message in messages %}
             {% if message.tags == 'error' %}
@@ -146,32 +149,6 @@
         </div>
     </div>
 </section>
-{#<div class="signup-section">#}
-{#FAQ section#}
-{#    <div class="container" id="faq-form" style="margin-top: 10px">#}
-{#        <h1 class="text-center" style="color: white">Send message us</h1>#}
-{#        <form style="color: white" action="/#fag-form">#}
-{#             <div class="mb-3">#}
-{#                <label for="name" class="form-label">Full Name</label>#}
-{#                <input type="text" name="name" class="form-control" id="email" aria-describedby="emailHelp">#}
-{#            </div>#}
-{#            <div class="mb-3">#}
-{#                <label for="email" class="form-label">Email</label>#}
-{#                <input type="email" name="email" class="form-control" id="email" aria-describedby="emailHelp">#}
-{#            </div>#}
-{#            <div class="mb-3">#}
-{#                <label for="text" class="form-label">Subject</label>#}
-{#                <input type="text" name="subject" class="form-control" id="email" aria-describedby="emailHelp">#}
-{#            </div>#}
-{#            <div class="mb-3">#}
-{#                <label for="text" class="form-label">Detail</label>#}
-{#                <textarea id="w3review" name="detail" style="width: 100%"  rows="4" cols="50"></textarea>#}
-{#            </div>#}
-{#            <button class="btn btn-secondary float-right" type="submit">Send Message <i#}
-{#                            class="fa fa-arrow-circle-right"></i></button>#}
-{#        </form>#}
-{#    </div>#}
-{#</div>#}
 <section  id="faq-form" class="signup-section">
     <div class="container">
         <div class="row">
