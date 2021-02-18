@@ -43,7 +43,7 @@ class User(AbstractBaseUser):
         max_length=255,
         unique=True,
     )
-    is_active = models.BooleanField(default=True)
+    is_active = models.BooleanField(default=False)
     is_admin = models.BooleanField(default=False)
     is_client = models.BooleanField(default=False)
     is_tutor = models.BooleanField(default=False)
@@ -55,6 +55,7 @@ class User(AbstractBaseUser):
     overview = models.TextField(verbose_name='Overview')
     expertise = models.CharField(max_length=1000, verbose_name='Expertise')
     profile_img = models.TextField(verbose_name='Profile Image', blank=True)
+    # email_confirmed = models.BooleanField(default=False)
 
     USERNAME_FIELD = 'email'
 

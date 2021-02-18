@@ -99,6 +99,7 @@ def edit_profile(request, profile_id):
             user.expertise = expertise
         # Add education
         upper_bound = int(request.POST.get('upper_bound', ''))
+        # print(upper_bound)
         if upper_bound >= 0:
             Education.objects.filter(user=user).delete()
             for i in range(upper_bound):

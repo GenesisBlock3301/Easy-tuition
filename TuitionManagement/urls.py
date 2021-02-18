@@ -24,6 +24,7 @@ urlpatterns = [
     path('tutor/', include('tutor.urls')),
     path('client/', include('client.urls')),
     path('tution/', include('tution.urls')),
+    path('',include('users.urls'))
 ]
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL,

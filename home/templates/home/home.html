@@ -13,12 +13,19 @@
     <title>Easy Tuition</title>
 
     <link href="{% static 'css/grayscale.min.css' %}" rel="stylesheet">
+    <style>
+        #head {
+            background: url({% static 'img/IMG-20210215-WA0026.jpg' %});
+            background-repeat: no-repeat;
+            background-size: 100%;
+        }
+    </style>
 </head>
 
 <body id="page-top">
 <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
     <div class="container">
-        <a class="navbar-brand js-scroll-trigger" href="#page-top" style="text-shadow: 2px 2px #FF0000;">Easy Tuition</a>
+        <a class="navbar-brand js-scroll-trigger" href="#page-top" style="text-shadow: 2px 2px green;">পড়ালেখা.COM </a>
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
                 data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -57,7 +64,7 @@
     {% endif %}
     <div class="container d-flex h-100 align-items-center">
         <div class="mx-auto text-center">
-            <h1 class="mx-auto my-0 text-uppercase">Easy Tution</h1>
+            <h1 class="text-uppercase" style="color: #e83e8c;font-weight: 600">পড়ালেখা.COM </h1>
             <h2 class="text-white-50 mx-auto mt-2 mb-5">The best place to find the suitable tutor for your children</h2>
             <a href="#signup_tutor" class="btn btn-outline-light js-scroll-trigger">I'm a Tutor</a>
             <a href="#signup_client" class="btn btn-outline-light js-scroll-trigger">I'm Student/Gardian</a>
@@ -65,11 +72,12 @@
     </div>
 </header>
 <section id="signup_tutor" class="signup-section"
-         style="background-color: rgba(0,0,0, 60);">
+         style="background: url({% static 'img/IMG-20210215-WA0023.jpg' %});background-repeat: no-repeat;
+                 background-size: 100%;">
     <div class="container">
         <div class="row">
             <div class="col-md-10 col-lg-8 mx-auto text-center">
-                <h1 class="text-uppercase" style="color: white">Sign up as a Tutor</h1>
+                <h1 class="text-uppercase" style="color: #e83e8c;font-weight: 600">Sign up as a Tutor</h1>
                 <form method="post" action="{% url 'register-action' %}">
                     {% csrf_token %}
                     <input class="form-control" type="hidden" name="user_type" value="tutor">
@@ -89,11 +97,13 @@
 </section>
 
 <!-- Signup Section -->
-<section id="signup_client" class="signup-section">
+<section id="signup_client" class="signup-section"
+         style="background: url({% static 'img/IMG-20210215-WA0024.jpg' %});background-repeat: no-repeat;
+                 background-size: 100%;">
     <div class="container">
         <div class="row">
             <div class="col-md-10 col-lg-8 mx-auto text-center">
-                <h1 class="text-light text-uppercase">Sign up as a Student/Gardian</h1>
+                <h1 class="text-uppercase" style="color: #e83e8c;font-weight: 600">Sign up as a Student/Gardian</h1>
                 <form method="post" action="{% url 'register-action' %}">
                     {% csrf_token %}
                     <input class="form-control" type="hidden" name="user_type" value="client">
@@ -111,15 +121,17 @@
     </div>
 </section>
 
-<section id="contact" class="contact-section bg-black" style="padding-bottom: 30px">
-    <div class="container">
+<section id="contact" class="contact-section bg-black"
+         style="padding-bottom: 30px;background: url({% static 'img/IMG-20210215-WA0026.jpg' %});border-color: transparent;background-repeat: no-repeat;
+                 background-size: 100%;">
+    <div class="container" style="color: #e83e8c;font-weight: 600">
         <div class="row">
             <div class="col-md-4 mb-3 mb-md-0">
                 <div class="card py-4 h-100">
                     <div class="card-body text-center">
                         <h4 class="text-uppercase m-0" style="font-weight: 600">Address</h4>
                         <hr class="my-4">
-                        <div class="small text-black-50">DIU, Dhaka, Bangladesh</div>
+                        <div class="small text-black-50">, Dhaka, Bangladesh</div>
                     </div>
                 </div>
             </div>
@@ -147,27 +159,30 @@
         </div>
     </div>
 </section>
-<section  id="faq-form" class="signup-section">
-    <div class="container">
+<section id="faq-form" class="signup-section"
+         style="background: url({% static 'img/IMG-20210215-WA0023.jpg' %});background-repeat: no-repeat;
+                 background-size: 100%;">
+    <div class="container" >
         <div class="row">
             <div class="col-md-10 col-lg-8 mx-auto text-center">
-                <h1 class="text-center" style="color: white">Send message us</h1>
-                <form method="post" action="/#fag-form">
+                <h1 class="text-center" style="color: #e83e8c;font-weight: 600">Send message to us</h1>
+                <form method="post" action="/#fag-form" >
                     {% csrf_token %}
                     <input class="form-control" type="text" name="name" placeholder="Enter Your Name"/>
                     <input class="form-control" type="email" name="email" placeholder="Enter Your Email"/>
                     <input class="form-control" type="text" name="subject" placeholder="Subject"/>
-                    <textarea id="w3review" name="message" placeholder="Message"  style="width: 100%;padding-left: 4%" rows="4" cols="50"></textarea>
-                    <button class="btn btn-secondary float-right" type="submit">Send Message <i
+                    <textarea id="w3review" name="message" placeholder="Message" style="width: 100%;padding-left: 4%"
+                              rows="4" cols="50"></textarea>
+                    <button style="font-weight: 600" class="btn btn-secondary float-right" type="submit">Send Message <i
                             class="fa fa-arrow-circle-right"></i></button>
                 </form>
             </div>
         </div>
     </div>
 </section>
-<footer class="bg-black small text-center text-white-50">
-    <div class="container">
-        Copyright &copy; Easy Tution
+<footer class="bg-primary small text-center text-white-50">
+    <div class="container" style="color: white;font-weight: 600">
+        Copyright &copy; পড়ালেখা.COM
     </div>
 </footer>
 

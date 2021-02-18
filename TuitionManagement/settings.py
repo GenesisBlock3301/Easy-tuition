@@ -35,6 +35,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'widget_tweaks',
     'home',
     'tutor',
     'client',
@@ -60,7 +61,7 @@ ROOT_URLCONF = 'TuitionManagement.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR,'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -106,11 +107,13 @@ AUTH_PASSWORD_VALIDATORS = [
 #################
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+MAILER_EMAIL_BACKEND = EMAIL_BACKEND
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_USE_TLS = True
 EMAIL_PORT = 587
-EMAIL_HOST_USER = 'genesisblock1033@gmail.com'
-EMAIL_HOST_PASSWORD = '7208393Na?'
+EMAIL_HOST_USER = 'poralekha3301@gmail.com'
+EMAIL_HOST_PASSWORD = 'nas12345@#'
+DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 
 ################
 
@@ -138,8 +141,8 @@ MEDIA_URL = '/media/'
 # Path where media is stored
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-import dj_database_url
-
-db_from_env = dj_database_url.config(conn_max_age=500)
-DATABASES['default'].update(db_from_env)
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+# import dj_database_url
+#
+# db_from_env = dj_database_url.config(conn_max_age=500)
+# DATABASES['default'].update(db_from_env)
+# STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
